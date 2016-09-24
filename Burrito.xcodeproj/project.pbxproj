@@ -10,6 +10,8 @@
 		396F42E84A1D3EB2D3F201F0 /* Pods_Burrito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282894CC567DCE53614CB9E5 /* Pods_Burrito.framework */; };
 		8E323D5B1D96F654006C8E27 /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E323D5A1D96F654006C8E27 /* RedeemViewController.swift */; };
 		8E323D5D1D96F97B006C8E27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E323D5C1D96F97B006C8E27 /* Item.swift */; };
+		8E323D5F1D96FF29006C8E27 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E323D5E1D96FF29006C8E27 /* LoginVC.swift */; };
+		8E323D611D970848006C8E27 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E323D601D970848006C8E27 /* RoundedButton.swift */; };
 		8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC84C621D96E3CC0044E0E7 /* CardView.xib */; };
 		8EC84C651D96E9FE0044E0E7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC84C641D96E9FE0044E0E7 /* CardView.swift */; };
 		C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C609581D9648D100BC9597 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 		282894CC567DCE53614CB9E5 /* Pods_Burrito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Burrito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E323D5A1D96F654006C8E27 /* RedeemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemViewController.swift; sourceTree = "<group>"; };
 		8E323D5C1D96F97B006C8E27 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8E323D5E1D96FF29006C8E27 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8E323D601D970848006C8E27 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8EC84C621D96E3CC0044E0E7 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		8EC84C641D96E9FE0044E0E7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			children = (
 				C8C6095A1D9648D100BC9597 /* ViewController.swift */,
 				8E323D5A1D96F654006C8E27 /* RedeemViewController.swift */,
+				8E323D5E1D96FF29006C8E27 /* LoginVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			children = (
 				8EC84C641D96E9FE0044E0E7 /* CardView.swift */,
 				8EC84C621D96E3CC0044E0E7 /* CardView.xib */,
+				8E323D601D970848006C8E27 /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -252,6 +258,8 @@
 			files = (
 				C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */,
 				C8C609611D9648D100BC9597 /* Burrito.xcdatamodeld in Sources */,
+				8E323D5F1D96FF29006C8E27 /* LoginVC.swift in Sources */,
+				8E323D611D970848006C8E27 /* RoundedButton.swift in Sources */,
 				8EC84C651D96E9FE0044E0E7 /* CardView.swift in Sources */,
 				8E323D5B1D96F654006C8E27 /* RedeemViewController.swift in Sources */,
 				8E323D5D1D96F97B006C8E27 /* Item.swift in Sources */,
