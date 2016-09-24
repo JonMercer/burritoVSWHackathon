@@ -90,6 +90,7 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = barCodeObject.bounds;
+            qrCodeFrameView?.center.y += 40
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
@@ -105,5 +106,11 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     func updateScannedLabel(){
         scannedLabel.text = "\(numberScanned) redeemed!"
         bounceView(scannedLabel, amount: 1.5)
+    }
+    
+    @IBAction func onBackButtonPressed(sender: AnyObject) {
+        if let navController = self.navigationController {
+            navController.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 }

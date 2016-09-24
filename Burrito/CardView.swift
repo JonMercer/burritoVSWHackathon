@@ -43,12 +43,22 @@ class CardView: UIView {
         
         if showingQRCode {
             showingQRCode = false
-            itemImage.image = item.image
-            
+            fadeInImage(itemImage, image: item.image)
         } else {
             showingQRCode = true
-            itemImage.image = generateQRCode()
+            fadeInImage(itemImage, image: generateQRCode())
         }
+    }
+    
+    func fadeInImage(imageView: UIImageView, image: UIImage){
+        UIView.animateWithDuration(0.3, animations: {
+            imageView.alpha = 0.0
+        })
+        
+        UIView.animateWithDuration(0.3, delay: 0.2, options: [], animations: {
+                imageView.image = image
+                imageView.alpha = 1.0
+            }, completion: nil)
     }
     
     func generateQRCode() -> UIImage {

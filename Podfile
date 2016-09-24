@@ -8,4 +8,5 @@ target 'Burrito' do
   # Pods for Burrito
   pod 'STZPopupView'
   pod 'IQKeyboardManagerSwift'
+  pod 'expanding-collection'
 end
