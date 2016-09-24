@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTestButtonTapped(sender: AnyObject) {
-        cardView = CardView(frame: CGRectMake(0, 0, 300, 300))
+        let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+        cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
+        cardView.item = item
         
         let popupConfig = STZPopupViewConfig()
         popupConfig.dismissTouchBackground = true
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func onCardTapped(sender: AnyObject){
-        
+        cardView.changeModes()
     }
 }
 

@@ -73,7 +73,7 @@
         <!--Item-->
         <scene sceneID="I3b-zI-6Zf">
             <objects>
-                <viewController id="ASh-Nf-8Ej" sceneMemberID="viewController">
+                <viewController id="ASh-Nf-8Ej" customClass="RedeemViewController" customModule="Burrito" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WVL-Pb-Zt6"/>
                         <viewControllerLayoutGuide type="bottom" id="h8p-Ng-DFg"/>
