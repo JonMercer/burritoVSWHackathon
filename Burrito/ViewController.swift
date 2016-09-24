@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import STZPopupView
 
 class ViewController: UIViewController {
-
+    
+    var cardView: CardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onTestButtonTapped(sender: AnyObject) {
+        cardView = CardView(frame: CGRectMake(0, 0, 300, 300))
+        
+        let popupConfig = STZPopupViewConfig()
+        popupConfig.dismissTouchBackground = true
+        popupConfig.cornerRadius = 5.0
+        
+        cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.onCardTapped(_:))))
+        presentPopupView(cardView, config:  popupConfig)
     }
-
-
+    
+    func onCardTapped(sender: AnyObject){
+        
+    }
 }
 

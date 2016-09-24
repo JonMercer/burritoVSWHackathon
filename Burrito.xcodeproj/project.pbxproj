@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396F42E84A1D3EB2D3F201F0 /* Pods_Burrito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282894CC567DCE53614CB9E5 /* Pods_Burrito.framework */; };
+		8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC84C621D96E3CC0044E0E7 /* CardView.xib */; };
+		8EC84C651D96E9FE0044E0E7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC84C641D96E9FE0044E0E7 /* CardView.swift */; };
 		C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C609581D9648D100BC9597 /* AppDelegate.swift */; };
 		C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6095A1D9648D100BC9597 /* ViewController.swift */; };
 		C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C6095C1D9648D100BC9597 /* Main.storyboard */; };
@@ -16,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282894CC567DCE53614CB9E5 /* Pods_Burrito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Burrito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EC84C621D96E3CC0044E0E7 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		8EC84C641D96E9FE0044E0E7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.debug.xcconfig"; sourceTree = "<group>"; };
+		C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.release.xcconfig"; sourceTree = "<group>"; };
 		C8C609551D9648D100BC9597 /* Burrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Burrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C609581D9648D100BC9597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C6095A1D9648D100BC9597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +39,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396F42E84A1D3EB2D3F201F0 /* Pods_Burrito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		406077204E2F2F883A86ABA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				282894CC567DCE53614CB9E5 /* Pods_Burrito.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		655017E66733C5B4E53760C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */,
+				C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8EC84C5F1D96E39C0044E0E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C8C6095A1D9648D100BC9597 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8EC84C601D96E3A10044E0E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EC84C641D96E9FE0044E0E7 /* CardView.swift */,
+				8EC84C621D96E3CC0044E0E7 /* CardView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8EC84C611D96E3A40044E0E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C8C6094C1D9648D000BC9597 = {
 			isa = PBXGroup;
 			children = (
 				C8C609571D9648D100BC9597 /* Burrito */,
 				C8C609561D9648D100BC9597 /* Products */,
+				655017E66733C5B4E53760C8 /* Pods */,
+				406077204E2F2F883A86ABA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +108,10 @@
 		C8C609571D9648D100BC9597 /* Burrito */ = {
 			isa = PBXGroup;
 			children = (
+				8EC84C611D96E3A40044E0E7 /* Model */,
+				8EC84C601D96E3A10044E0E7 /* View */,
+				8EC84C5F1D96E39C0044E0E7 /* Controller */,
 				C8C609581D9648D100BC9597 /* AppDelegate.swift */,
-				C8C6095A1D9648D100BC9597 /* ViewController.swift */,
 				C8C6095C1D9648D100BC9597 /* Main.storyboard */,
 				C8C609621D9648D100BC9597 /* Assets.xcassets */,
 				C8C609641D9648D100BC9597 /* LaunchScreen.storyboard */,
@@ -74,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8C6096A1D9648D100BC9597 /* Build configuration list for PBXNativeTarget "Burrito" */;
 			buildPhases = (
+				26023ACFE552CDC8FF36215A /* [CP] Check Pods Manifest.lock */,
 				C8C609511D9648D000BC9597 /* Sources */,
 				C8C609521D9648D000BC9597 /* Frameworks */,
 				C8C609531D9648D000BC9597 /* Resources */,
+				007C4FA28EFA2F2169D681CC /* [CP] Embed Pods Frameworks */,
+				AC922107D0190B6B5687A5F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,11 +184,60 @@
 			files = (
 				C8C609661D9648D100BC9597 /* LaunchScreen.storyboard in Resources */,
 				C8C609631D9648D100BC9597 /* Assets.xcassets in Resources */,
+				8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */,
 				C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		007C4FA28EFA2F2169D681CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Burrito/Pods-Burrito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26023ACFE552CDC8FF36215A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC922107D0190B6B5687A5F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Burrito/Pods-Burrito-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8C609511D9648D000BC9597 /* Sources */ = {
@@ -140,6 +246,7 @@
 			files = (
 				C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */,
 				C8C609611D9648D100BC9597 /* Burrito.xcdatamodeld in Sources */,
+				8EC84C651D96E9FE0044E0E7 /* CardView.swift in Sources */,
 				C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +358,7 @@
 		};
 		C8C6096B1D9648D100BC9597 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Burrito/Info.plist;
@@ -263,6 +371,7 @@
 		};
 		C8C6096C1D9648D100BC9597 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Burrito/Info.plist;
