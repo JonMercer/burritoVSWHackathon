@@ -16,6 +16,8 @@
 		8E323D661D972072006C8E27 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E323D651D972072006C8E27 /* General.swift */; };
 		8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC84C621D96E3CC0044E0E7 /* CardView.xib */; };
 		8EC84C651D96E9FE0044E0E7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC84C641D96E9FE0044E0E7 /* CardView.swift */; };
+		C863C6A01D972B92008D5C93 /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C863C69F1D972B92008D5C93 /* ShareView.xib */; };
+		C863C6A21D972BA1008D5C93 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863C6A11D972BA1008D5C93 /* ShareView.swift */; };
 		C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C609581D9648D100BC9597 /* AppDelegate.swift */; };
 		C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6095A1D9648D100BC9597 /* ViewController.swift */; };
 		C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C6095C1D9648D100BC9597 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		8EC84C641D96E9FE0044E0E7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.debug.xcconfig"; sourceTree = "<group>"; };
 		C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.release.xcconfig"; sourceTree = "<group>"; };
+		C863C69F1D972B92008D5C93 /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		C863C6A11D972BA1008D5C93 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		C8C609551D9648D100BC9597 /* Burrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Burrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C609581D9648D100BC9597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C6095A1D9648D100BC9597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				8EC84C641D96E9FE0044E0E7 /* CardView.swift */,
 				8EC84C621D96E3CC0044E0E7 /* CardView.xib */,
 				8E323D601D970848006C8E27 /* RoundedButton.swift */,
+				C863C69F1D972B92008D5C93 /* ShareView.xib */,
+				C863C6A11D972BA1008D5C93 /* ShareView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				C8C609661D9648D100BC9597 /* LaunchScreen.storyboard in Resources */,
 				C8C609631D9648D100BC9597 /* Assets.xcassets in Resources */,
 				8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */,
+				C863C6A01D972B92008D5C93 /* ShareView.xib in Resources */,
 				C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +279,7 @@
 			files = (
 				C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */,
 				C8C609611D9648D100BC9597 /* Burrito.xcdatamodeld in Sources */,
+				C863C6A21D972BA1008D5C93 /* ShareView.swift in Sources */,
 				8E323D5F1D96FF29006C8E27 /* LoginVC.swift in Sources */,
 				8E323D611D970848006C8E27 /* RoundedButton.swift in Sources */,
 				8E323D661D972072006C8E27 /* General.swift in Sources */,
