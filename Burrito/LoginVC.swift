@@ -30,5 +30,6 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func onLoginPressed(sender: AnyObject) {
+        performSegueWithIdentifier("qrScanVCFromLoginVC", sender: nil)
     }
 }

@@ -52,7 +52,7 @@ class CardView: UIView {
     }
     
     func generateQRCode() -> UIImage {
-        let reqStr = "string to convert as QR code"
+        let reqStr = "\(item.name) from \(item.restaurant)"
         let data = reqStr.dataUsingEncoding(NSISOLatin1StringEncoding, allowLossyConversion: false)
         
         let filter = CIFilter(name: "CIQRCodeGenerator")
