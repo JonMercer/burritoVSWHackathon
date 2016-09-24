@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -25,6 +25,13 @@
                         <constraint firstAttribute="width" secondItem="Wak-Lc-2Tf" secondAttribute="height" multiplier="1:1" id="9fp-kP-qFj"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-Bq-oYo">
+                    <rect key="frame" x="13" y="241" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="notificationButton:" destination="xDr-1S-vrP" eventType="touchUpInside" id="RAj-67-7Ci"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIPLE O'S MILKSHAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-ew-uyf">
                     <rect key="frame" x="8" y="245" width="284" height="21"/>
                     <constraints>
@@ -36,7 +43,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="YQ7-Bq-oYo" firstAttribute="centerY" secondItem="M5d-ew-uyf" secondAttribute="centerY" id="Fny-QM-c7E"/>
                 <constraint firstAttribute="trailing" secondItem="M5d-ew-uyf" secondAttribute="trailing" constant="8" id="N9S-f5-1Av"/>
+                <constraint firstItem="YQ7-Bq-oYo" firstAttribute="leading" secondItem="xDr-1S-vrP" secondAttribute="leading" constant="13" id="e4C-8K-22p"/>
                 <constraint firstAttribute="bottom" secondItem="M5d-ew-uyf" secondAttribute="bottom" constant="34" id="f9r-ac-vCE"/>
                 <constraint firstItem="Wak-Lc-2Tf" firstAttribute="centerX" secondItem="xDr-1S-vrP" secondAttribute="centerX" id="kKd-48-S5j"/>
                 <constraint firstItem="M5d-ew-uyf" firstAttribute="leading" secondItem="xDr-1S-vrP" secondAttribute="leading" constant="8" id="l6f-Z9-Kva"/>
