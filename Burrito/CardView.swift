@@ -14,6 +14,19 @@ class CardView: UIView {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     
+    @IBAction func notificationButton(sender: AnyObject) {
+        //temporary button
+        var localNotification = UILocalNotification()
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 20)
+        localNotification.alertBody = "Raffle: Tripple O's Milkshake."
+        localNotification.timeZone = NSTimeZone.defaultTimeZone()
+        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
+    }
+    
+    
     var item: Item!
     
     var showingQRCode: Bool = false
