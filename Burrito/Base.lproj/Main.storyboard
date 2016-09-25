@@ -46,22 +46,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV3-9d-AbY">
-                                <rect key="frame" x="534" y="369" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jV3-9d-AbY">
+                                <rect key="frame" x="494" y="369" width="86" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="2ms-1D-EBL"/>
                                     <constraint firstAttribute="height" constant="30" id="Ivu-fb-doM"/>
+                                    <constraint firstAttribute="width" constant="86" id="Wnu-Up-XG5"/>
+                                    <constraint firstAttribute="height" constant="63" id="xIZ-9c-6tN"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2ms-1D-EBL"/>
+                                        <exclude reference="Ivu-fb-doM"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="onTestButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rv-Rs-hAi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWY-Qb-veX">
-                                <rect key="frame" x="534" y="407" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onNotificationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyc-2u-cop"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-lP-sAz">
@@ -243,6 +243,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWY-Qb-veX">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="PLY-JB-7Ik"/>
+                                    <constraint firstAttribute="height" constant="53" id="VsS-bh-u9g"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onNotificationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyc-2u-cop"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.49019607840000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -250,8 +260,11 @@
                             <constraint firstItem="68C-Sy-fC7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="2g2-m2-KZQ"/>
                             <constraint firstItem="ynG-f1-ELn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="73S-Nd-Ppe"/>
                             <constraint firstItem="ynG-f1-ELn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-8" id="91Z-Er-pTz"/>
+                            <constraint firstItem="bWY-Qb-veX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="E8X-za-qgq"/>
                             <constraint firstItem="ynG-f1-ELn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="EGi-LF-5gk"/>
                             <constraint firstAttribute="trailing" secondItem="ynG-f1-ELn" secondAttribute="trailing" constant="12" id="HMi-dJ-7Bm"/>
+                            <constraint firstItem="jV3-9d-AbY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JNI-rM-ZdT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jV3-9d-AbY" secondAttribute="bottom" constant="119" id="Qvb-vg-hhr"/>
                             <constraint firstItem="Asa-RK-1yG" firstAttribute="top" secondItem="E1W-XA-Eyz" secondAttribute="bottom" constant="8" id="SDI-mz-Bzo"/>
                             <constraint firstItem="BDR-Ad-joY" firstAttribute="top" secondItem="US3-Fa-6mT" secondAttribute="bottom" constant="-10" id="T2U-R8-7kY"/>
                             <constraint firstItem="BDR-Ad-joY" firstAttribute="centerY" secondItem="ktR-lP-sAz" secondAttribute="centerY" id="TZ5-tw-8oI"/>
@@ -277,16 +290,22 @@
                             <constraint firstItem="9VF-oQ-8St" firstAttribute="centerX" secondItem="ktR-lP-sAz" secondAttribute="centerX" id="x2N-jm-vqr"/>
                             <constraint firstItem="68C-Sy-fC7" firstAttribute="top" secondItem="E1W-XA-Eyz" secondAttribute="bottom" constant="100" id="xdC-PR-lWR"/>
                             <constraint firstItem="YoF-hr-jaY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfr-rR-88B"/>
+                            <constraint firstItem="bWY-Qb-veX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yes-VM-1sq"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="e8i-Nk-Cbg"/>
+                                <exclude reference="m8t-7x-6I1"/>
                                 <exclude reference="uGP-rY-sz3"/>
                                 <exclude reference="dpM-ab-Qad"/>
                                 <exclude reference="iFh-GI-a7C"/>
                                 <exclude reference="oZ5-ft-PxY"/>
                                 <exclude reference="xdC-PR-lWR"/>
+                                <exclude reference="WwK-6v-zro"/>
                                 <exclude reference="73S-Nd-Ppe"/>
                                 <exclude reference="91Z-Er-pTz"/>
+                                <exclude reference="0OP-23-cwX"/>
+                                <exclude reference="Tm1-fM-uWJ"/>
                             </mask>
                         </variation>
                     </view>
@@ -383,7 +402,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-vc-dAm" customClass="LabelActivitySpinner" customModule="ButtonAndLabelActivitySpinner">
                                 <rect key="frame" x="279" y="459" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
