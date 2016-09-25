@@ -28,6 +28,8 @@ class ItemCell: BasePageCollectionCell {
         
         cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
         cardView.item = item
+        cardView.win = true
+        cardView.initializeView()
         
         self.frontContainerView.addSubview(cardView)
     }

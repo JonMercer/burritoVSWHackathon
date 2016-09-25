@@ -9,7 +9,7 @@
 import UIKit
 import STZPopupView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CardViewDelegate {
     
     var cardView: CardView!
     
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var secondsLeft = 60*40 // 40min
     
     let CHANGE_MODE_DELAY = 2.0
-    let LOADING_DELAY = 2.0
+    let LOADING_DELAY = 2.5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +62,12 @@ class ViewController: UIViewController {
     }
     
     func showItem(){
-        let item = Item(name: "Milkshake", restaurant: "Triple O's")
+        let item = Item(name: "15% Off", restaurant: "Deer Island Bakery", image: UIImage(named: "deerislandwin")!)
         cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
         cardView.item = item
+        cardView.win = false
+        cardView.initializeView()
+        cardView.delegate = self
         
         let popupConfig = STZPopupViewConfig()
         popupConfig.dismissTouchBackground = true
@@ -87,6 +90,10 @@ class ViewController: UIViewController {
     
     func onCardTapped(sender: AnyObject){
         cardView.changeModes()
+    }
+    
+    func dismissCard() {
+        dismissPopupView()
     }
     
     @IBAction func onRestaurantButtonTapped(sender: AnyObject) {

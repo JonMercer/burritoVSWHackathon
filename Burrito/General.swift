@@ -12,6 +12,7 @@ import UIKit
 let VC_INDEX = 0
 let BLUE_COLOR = UIColor(red: 67.0/255.0, green: 125.0/255.0, blue: 234.0/255.0, alpha: 1.0)
 let DARK_BLUR_COLOR = UIColor(red: 44.0/255.0, green: 83.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+let GREEN_COLOR = UIColor(red: 28.0/255.0, green: 220.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 
 func bounceView(view: UIView, amount: CGFloat){
     UIView.animateWithDuration(0.1, delay: 0.0, options: [], animations: {
@@ -34,7 +35,7 @@ func delay(amount: Double, completion:()->()){
 func sendLocalNotification(){
     var localNotification = UILocalNotification()
     localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-    localNotification.alertBody = "Giveaway: Triple O's Milkshake."
+    localNotification.alertBody = "Giveaway: Deer Island Bakery Swipe to enter!"
     localNotification.timeZone = NSTimeZone.defaultTimeZone()
     localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
     

@@ -28,6 +28,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBarHidden = true
         hideKeyboardWhenTappedAround()
         
+        emailTextField.text = "test@getburrito.com"
     }
 
     @IBAction func onBackButtonPressed(sender: AnyObject) {

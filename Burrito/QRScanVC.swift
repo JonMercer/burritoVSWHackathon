@@ -100,15 +100,13 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 //messageLabel.text = metadataObj.stringValue
                 messageLabel.text = ""
                 
-                let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+                let item = Item(name: "$20 Food Gift Card", restaurant: "Tao", image: UIImage(named: "taowin")!)
                 let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
                 cardView.item = item
-                    
-                if hasScanned {
-                    cardView.resultsLabel.text = "This code has already been scanned"
-                } else {
+                cardView.initializeScanView(hasScanned)
+                
+                if !hasScanned{
                     hasScanned = true
-                    cardView.resultsLabel.text = "Triple O's Milkshake"
                 }
                     
                 let popupConfig = STZPopupViewConfig()
@@ -116,10 +114,6 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 popupConfig.cornerRadius = 5.0
                 
                 self.presentPopupView(cardView, config:  popupConfig)
-                
-                delay(2){
-                    cardView.removeFromSuperview()
-                }
             }
         }
     }

@@ -31,8 +31,8 @@
 		8ED66FD91D9780F40014902D /* Mosk_Info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCF1D9780F40014902D /* Mosk_Info.pdf */; };
 		8ED66FDB1D9790530014902D /* dancingtaco.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FDA1D9790530014902D /* dancingtaco.gif */; };
 		8ED66FDD1D97979C0014902D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FDC1D97979C0014902D /* GoogleService-Info.plist */; };
+		8ED66FDF1D98555B0014902D /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED66FDE1D98555B0014902D /* BorderedButton.swift */; };
 		C863C6A01D972B92008D5C93 /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C863C69F1D972B92008D5C93 /* ShareView.xib */; };
-		C863C6A21D972BA1008D5C93 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863C6A11D972BA1008D5C93 /* ShareView.swift */; };
 		C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C609581D9648D100BC9597 /* AppDelegate.swift */; };
 		C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6095A1D9648D100BC9597 /* ViewController.swift */; };
 		C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C6095C1D9648D100BC9597 /* Main.storyboard */; };
@@ -66,10 +66,10 @@
 		8ED66FCF1D9780F40014902D /* Mosk_Info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Mosk_Info.pdf; sourceTree = "<group>"; };
 		8ED66FDA1D9790530014902D /* dancingtaco.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dancingtaco.gif; sourceTree = "<group>"; };
 		8ED66FDC1D97979C0014902D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8ED66FDE1D98555B0014902D /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.debug.xcconfig"; sourceTree = "<group>"; };
 		C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.release.xcconfig"; sourceTree = "<group>"; };
 		C863C69F1D972B92008D5C93 /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
-		C863C6A11D972BA1008D5C93 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		C8C609551D9648D100BC9597 /* Burrito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Burrito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C609581D9648D100BC9597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C6095A1D9648D100BC9597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 				8EC84C621D96E3CC0044E0E7 /* CardView.xib */,
 				8E323D601D970848006C8E27 /* RoundedButton.swift */,
 				C863C69F1D972B92008D5C93 /* ShareView.xib */,
-				C863C6A11D972BA1008D5C93 /* ShareView.swift */,
 				8ED66FBC1D9731700014902D /* ItemCell.swift */,
 				8ED66FBD1D9731700014902D /* ItemCell.xib */,
+				8ED66FDE1D98555B0014902D /* BorderedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -351,9 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED66FDF1D98555B0014902D /* BorderedButton.swift in Sources */,
 				C8C6095B1D9648D100BC9597 /* ViewController.swift in Sources */,
 				C8C609611D9648D100BC9597 /* Burrito.xcdatamodeld in Sources */,
-				C863C6A21D972BA1008D5C93 /* ShareView.swift in Sources */,
 				8E323D5F1D96FF29006C8E27 /* LoginVC.swift in Sources */,
 				8ED66FBE1D9731700014902D /* ItemCell.swift in Sources */,
 				8E323D611D970848006C8E27 /* RoundedButton.swift in Sources */,

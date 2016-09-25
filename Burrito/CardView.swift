@@ -9,11 +9,17 @@
 import UIKit
 import Gifu
 
+protocol CardViewDelegate {
+    func dismissCard()
+}
+
 class CardView: UIView {
 
     @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var redeemLaterButton: UIButton!
+    @IBOutlet weak var mapsButton: RoundedButton!
     
     var gifView: AnimatableImageView!
     
@@ -21,8 +27,43 @@ class CardView: UIView {
     
     var showingQRCode: Bool = false
     
+    var win: Bool = true
+    
+    var delegate: CardViewDelegate!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func initializeView(){
+        if let item = item {
+            itemImage.image = item.image
+            itemName.text = "\(item.name) From \(item.restaurant)"
+        }
+        mapsButton.hidden = false
+        showResult()
+    }
+    
+    func initializeScanView(hasScanned: Bool){
+        if let item = item {
+            itemImage.image = item.image
+            itemName.text = "\(item.name) From \(item.restaurant)"
+        }
+        if hasScanned {
+            resultsLabel.text = "Code Expired"
+            resultsLabel.textColor = UIColor.redColor()
+        } else {
+            resultsLabel.text = "Redeem Successful!"
+            resultsLabel.textColor = GREEN_COLOR
+        }
+    }
+    
+    func showResult(){
+        if win {
+            resultsLabel.text = "You Win!"
+        } else {
+            resultsLabel.text = "You Get A Discount!"
+        }
     }
     
     class func instanceFromNib(frame: CGRect) -> CardView {
@@ -32,6 +73,12 @@ class CardView: UIView {
     }
     
     func showLoading(){
+        resultsLabel.text = "Drawing..."
+        
+        itemImage.hidden = true
+        itemName.hidden = true
+        mapsButton.hidden = true
+        
         gifView = AnimatableImageView(frame: itemImage.frame)
         gifView.bounds = itemImage.bounds
         gifView.animateWithImage(named: "dancingtaco.gif")
@@ -39,7 +86,13 @@ class CardView: UIView {
     }
     
     func stopLoading(){
+        itemImage.hidden = false
+        itemName.hidden = false
+        mapsButton.hidden = false
+        
         gifView.removeFromSuperview()
+        showResult()
+        redeemLaterButton.hidden = false
     }
     
     func changeModes(){
@@ -79,5 +132,29 @@ class CardView: UIView {
         
         let resultQrImage = qrImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
         return UIImage(CIImage: resultQrImage)
+    }
+    
+    @IBAction func onRedeemLaterPressed(sender: AnyObject) {
+        delegate?.dismissCard()
+    }
+    
+    @IBAction func onMapButtonPressed(sender: AnyObject) {
+        guard let item = item else { return }
+        var restaurant_string = item.restaurant.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("&", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("?", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("=", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("!", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("@", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("$", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("%", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("^", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("*", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("'", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("`", withString: "+")
+        restaurant_string = restaurant_string.stringByReplacingOccurrencesOfString("’", withString: "+")
+        print(restaurant_string)
+        UIApplication.sharedApplication().openURL(NSURL(string:
+            "comgooglemaps://?q=\(restaurant_string)&center=45.6387,-122.6615&zoom=15&views=")!)
     }
 }
