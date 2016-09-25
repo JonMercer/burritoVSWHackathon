@@ -12,10 +12,36 @@ import STZPopupView
 class ViewController: UIViewController {
     
     var cardView: CardView!
-    
+    @IBOutlet weak var timerLabel: UILabel!
+    var timer = NSTimer()
+    var minutesLabel = ""
+    var secondsLabel = ""
+    var secondsLeft = 6 // 40min
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTimerLabel()
+        let one:NSTimeInterval = 1.0
+        timer = NSTimer.scheduledTimerWithTimeInterval(one, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
+    }
+    
+    func timerAction() {
+        
+        if(secondsLeft > 0) {
+            secondsLeft -= 1
+        } else {
+            timer.invalidate()
+        }
+        
+        updateTimerLabel()
+        
+    }
+    
+    func updateTimerLabel() {
+        minutesLabel = String(format: "%02d",(secondsLeft / 60) % 60)
+        secondsLabel = String(format: "%02d", secondsLeft % 60)
+        timerLabel.text = "\(minutesLabel)" + ":" + "\(secondsLabel)"
     }
 
     @IBAction func onTestButtonTapped(sender: AnyObject) {
