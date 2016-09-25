@@ -13,13 +13,19 @@ class ViewController: UIViewController {
     
     var cardView: CardView!
     
+    let CHANGE_MODE_DELAY: Int64 = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
     @IBAction func onTestButtonTapped(sender: AnyObject) {
-        let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+        showItem()
+    }
+    
+    func showItem(){
+        let item = Item(name: "Milkshake", restaurant: "Triple O's")
         cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
         cardView.item = item
         
@@ -29,6 +35,13 @@ class ViewController: UIViewController {
         
         cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.onCardTapped(_:))))
         presentPopupView(cardView, config:  popupConfig)
+        
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), CHANGE_MODE_DELAY * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            if !self.cardView.showingQRCode {
+                self.cardView.changeModes()
+            }
+        }
     }
     
     func onCardTapped(sender: AnyObject){
