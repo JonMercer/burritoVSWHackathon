@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Play-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Burrito" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="width" constant="254" id="fwv-Eb-Y9s"/>
                                     <constraint firstAttribute="height" constant="114" id="xIH-ss-kVv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="51"/>
                                 <color key="textColor" red="1" green="0.11751313989999999" blue="0.25778628199999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -44,9 +44,7 @@
                                     <constraint firstAttribute="width" constant="46" id="2ms-1D-EBL"/>
                                     <constraint firstAttribute="height" constant="30" id="Ivu-fb-doM"/>
                                 </constraints>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onTestButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rv-Rs-hAi"/>
                                 </connections>
@@ -75,7 +73,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="jV3-9d-AbY" secondAttribute="trailing" constant="257" id="0OP-23-cwX"/>
                             <constraint firstItem="ynG-f1-ELn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="73S-Nd-Ppe"/>
@@ -92,7 +90,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zgD-Vg-QAY"/>
+                    <tabBarItem key="tabBarItem" title="Play" image="dice-3" id="zgD-Vg-QAY"/>
                     <connections>
                         <segue destination="1NB-pu-fzG" kind="show" identifier="vcToLoginVC" id="OJN-Ne-J0Q"/>
                     </connections>
@@ -180,6 +178,12 @@
                                     <action selector="onLoginPressed:" destination="WUU-eR-FSZ" eventType="touchUpInside" id="WKG-fI-i5w"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-vc-dAm" customClass="LabelActivitySpinner" customModule="ButtonAndLabelActivitySpinner">
+                                <rect key="frame" x="279" y="459" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.58826926773495614" blue="0.19310745299021292" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -190,6 +194,8 @@
                             <constraint firstItem="QCg-es-q1w" firstAttribute="top" secondItem="VJY-2h-O2W" secondAttribute="bottom" id="B4S-SN-YnR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fCB-j7-7ul" secondAttribute="trailing" constant="28" id="BQh-AW-Tle"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8hh-BJ-1f8" secondAttribute="trailing" constant="28" id="MSC-ZY-X9j"/>
+                            <constraint firstItem="ZtR-vc-dAm" firstAttribute="centerX" secondItem="bBk-Rr-CS2" secondAttribute="centerX" id="OmD-B8-Jie"/>
+                            <constraint firstItem="ZtR-vc-dAm" firstAttribute="centerY" secondItem="bBk-Rr-CS2" secondAttribute="centerY" id="T8f-Yw-yhN"/>
                             <constraint firstItem="bBk-Rr-CS2" firstAttribute="leading" secondItem="4tC-w0-ZTu" secondAttribute="leadingMargin" constant="28" id="cxH-Ha-JNV"/>
                             <constraint firstItem="8hh-BJ-1f8" firstAttribute="top" secondItem="VJY-2h-O2W" secondAttribute="bottom" constant="80" id="f0u-wn-Z6O"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bBk-Rr-CS2" secondAttribute="trailing" constant="28" id="hnJ-Wt-UNH"/>
@@ -205,6 +211,7 @@
                         <outlet property="emailTextField" destination="fCB-j7-7ul" id="aAc-iH-wyU"/>
                         <outlet property="loginButton" destination="bBk-Rr-CS2" id="G5g-Ny-2ZG"/>
                         <outlet property="passwordTextField" destination="vfD-5h-Ddm" id="IgA-KN-DwW"/>
+                        <outlet property="spinLabel" destination="ZtR-vc-dAm" id="a5N-0R-LUs"/>
                         <segue destination="aLb-es-E2D" kind="show" identifier="qrScanVCFromLoginVC" id="FQm-MX-4yB"/>
                     </connections>
                 </viewController>
@@ -299,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="2452" y="277"/>
         </scene>
-        <!--Item-->
+        <!--Prizes-->
         <scene sceneID="I3b-zI-6Zf">
             <objects>
                 <viewController id="ASh-Nf-8Ej" customClass="RedeemViewController" customModule="Burrito" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,7 +319,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.53401442307692304" green="0.53401442307692304" blue="0.53401442307692304" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Uoi-kz-Tpp"/>
+                    <tabBarItem key="tabBarItem" title="Prizes" image="pinata" id="Uoi-kz-Tpp">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsV-jk-55q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +348,8 @@
     </scenes>
     <resources>
         <image name="backbuttonwhite" width="128" height="128"/>
+        <image name="dice-3" width="20" height="20"/>
+        <image name="pinata" width="20" height="26"/>
         <image name="restaurant" width="27" height="38"/>
     </resources>
 </document>

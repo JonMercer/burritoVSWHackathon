@@ -98,16 +98,19 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
                 if flag {
-                    flag = false
-                    let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
-                    let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
-                    cardView.item = item
                     
-                    let popupConfig = STZPopupViewConfig()
-                    popupConfig.dismissTouchBackground = true
-                    popupConfig.cornerRadius = 5.0
-                    
-                    presentPopupView(cardView, config:  popupConfig)
+                    delay(0.1){
+                        self.flag = false
+                        let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+                        let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
+                        cardView.item = item
+                        
+                        let popupConfig = STZPopupViewConfig()
+                        popupConfig.dismissTouchBackground = true
+                        popupConfig.cornerRadius = 5.0
+                        
+                        self.presentPopupView(cardView, config:  popupConfig)
+                    }
                 }
             }
         }

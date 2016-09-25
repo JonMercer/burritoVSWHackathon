@@ -31,7 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-        application.applicationIconBadgeNumber = 0
+        if let tabBarController: UITabBarController = self.window?.rootViewController as? UITabBarController {
+            if application.applicationState == UIApplicationState.Active {
+                NotificationsManager.sharedInstance.presentCardView(tabBarController)
+            } else if application.applicationState == UIApplicationState.Background {
+                //do nothing
+            } else if application.applicationState == UIApplicationState.Inactive {
+                NotificationsManager.sharedInstance.presentCardView(tabBarController)
+            }
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -120,6 +128,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
 
