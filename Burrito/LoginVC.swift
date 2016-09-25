@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import ButtonAndLabelActivitySpinner
 
 class LoginVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: RoundedButton!
+    @IBOutlet weak var spinLabel: LabelActivitySpinner!
+    
+    var LOGIN_DELAY: Int64 = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onLoginPressed(sender: AnyObject) {
-        performSegueWithIdentifier("qrScanVCFromLoginVC", sender: nil)
+        loginButton.hidden = true
+        spinLabel.activityIndicator.color = UIColor(red: 255.0/255.0, green: 64.0/255.0, blue: 64.0/255.0, alpha: 1.0)
+        spinLabel.startAnimating()
+
+        delay(0.3){
+            self.performSegueWithIdentifier("qrScanVCFromLoginVC", sender: nil)
+            self.spinLabel.stopAnimating()
+            self.loginButton.hidden = false
+        }
     }
 }

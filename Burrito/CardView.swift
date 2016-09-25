@@ -17,8 +17,8 @@ class CardView: UIView {
     @IBAction func notificationButton(sender: AnyObject) {
         //temporary button
         var localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 10)
-        localNotification.alertBody = "Raffle: Tripple O's Milkshake."
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        localNotification.alertBody = "Giveaway: Triple O's Milkshake."
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
         localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         
@@ -26,10 +26,13 @@ class CardView: UIView {
 
     }
     
-    
     var item: Item!
     
     var showingQRCode: Bool = false
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     class func instanceFromNib(frame: CGRect) -> CardView {
         let view = UINib(nibName: "CardView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! CardView

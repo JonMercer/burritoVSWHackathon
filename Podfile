@@ -9,4 +9,5 @@ target 'Burrito' do
   pod 'STZPopupView'
   pod 'IQKeyboardManagerSwift'
   pod 'expanding-collection'
+  pod 'ButtonAndLabelActivitySpinner'
 end
