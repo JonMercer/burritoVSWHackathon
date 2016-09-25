@@ -27,9 +27,9 @@ class Item {
         return _image
     }
     
-    init(name: String, restaurant: String){
+    init(name: String, restaurant: String, image: UIImage){
         _name = name
         _restaurant = restaurant
-        _image = UIImage(named: "milkshake")
+        _image = image
     }
 }

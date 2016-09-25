@@ -22,10 +22,9 @@ class RedeemViewController: ExpandingViewController {
         let nib = UINib(nibName: "ItemCell", bundle: nil)
         collectionView?.registerNib(nib, forCellWithReuseIdentifier: "ItemCell")
         
-        items.append(Item(name: "Milkshake", restaurant: "Triple O's"))
-        items.append(Item(name: "Milkshake", restaurant: "Triple O's"))
-        items.append(Item(name: "Milkshake", restaurant: "Triple O's"))
-        items.append(Item(name: "Milkshake", restaurant: "Triple O's"))
+        items.append(Item(name: "15% Off", restaurant: "Deer Island Bakery", image: UIImage(named: "deerislandwin")!))
+        items.append(Item(name: "$20 Food Gift Card", restaurant: "Tao", image: UIImage(named: "taowin")!))
+        items.append(Item(name: "One Month Free Meals", restaurant: "Enroot", image: UIImage(named: "enrootwin")!))
         collectionView?.reloadData()
     }
 
@@ -34,6 +33,12 @@ class RedeemViewController: ExpandingViewController {
         
         let item = items[indexPath.row]
         cell.configureCell(item)
+        if indexPath.row == 0 {
+            cell.cardView.win = false
+        } else {
+            cell.cardView.win = true
+        }
+        cell.cardView.showResult()
         
         return cell
     }

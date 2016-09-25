@@ -4,6 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mosk Ultra-Bold 900.ttf">
+            <string>MoskUltra-Bold900</string>
+            <string>MoskUltra-Bold900</string>
+            <string>MoskUltra-Bold900</string>
+            <string>MoskUltra-Bold900</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -11,51 +19,115 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU WIN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WO-on-543">
-                    <rect key="frame" x="8" y="30" width="284" height="42"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WO-on-543">
+                    <rect key="frame" x="8" y="15" width="284" height="42"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="42" id="vfX-tO-eUm"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                    <fontDescription key="fontDescription" name="MoskUltra-Bold900" family="Mosk" pointSize="22"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="milkshake" translatesAutoresizingMaskIntoConstraints="NO" id="Wak-Lc-2Tf">
-                    <rect key="frame" x="75" y="80" width="150" height="150"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wak-Lc-2Tf">
+                    <rect key="frame" x="68" y="65" width="165" height="165"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Wak-Lc-2Tf" secondAttribute="height" multiplier="1:1" id="9fp-kP-qFj"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRIPLE O'S MILKSHAKE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-ew-uyf">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-ew-uyf">
                     <rect key="frame" x="8" y="245" width="284" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="oZU-nK-YSJ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="MoskUltra-Bold900" family="Mosk" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QOa-Br-GKN">
+                    <rect key="frame" x="63" y="273" width="0.0" height="27"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy5-gZ-h11" customClass="RoundedButton" customModule="Burrito" customModuleProvider="target">
+                            <rect key="frame" x="-150" y="-258" width="0.0" height="27"/>
+                            <color key="backgroundColor" red="1" green="0.2495000771" blue="0.25118232289999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="BBc-gZ-w8Y"/>
+                                <constraint firstAttribute="width" constant="100" id="icw-Cz-AnI"/>
+                                <constraint firstAttribute="height" constant="18" id="lkM-4r-TCp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MoskUltra-Bold900" family="Mosk" pointSize="12"/>
+                            <state key="normal" title="REDEEM LATER">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="BBc-gZ-w8Y"/>
+                                    <exclude reference="lkM-4r-TCp"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="onRedeemLaterPressed:" destination="xDr-1S-vrP" eventType="touchUpInside" id="IiF-9B-Pk8"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6la-sB-6GM" customClass="RoundedButton" customModule="Burrito" customModuleProvider="target">
+                            <rect key="frame" x="-150" y="-258" width="0.0" height="27"/>
+                            <color key="backgroundColor" red="0.067214182560188587" green="0.77647058823529413" blue="0.010915748438881007" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="9dB-2S-nWG"/>
+                                <constraint firstAttribute="width" constant="100" id="VJZ-tH-zQf"/>
+                                <constraint firstAttribute="height" constant="18" id="viN-Re-ry9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MoskUltra-Bold900" family="Mosk" pointSize="12"/>
+                            <state key="normal" title="GOOGLE MAPS">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="9dB-2S-nWG"/>
+                                    <exclude reference="viN-Re-ry9"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="onMapButtonPressed:" destination="xDr-1S-vrP" eventType="touchUpInside" id="UEx-zE-zkk"/>
+                                <action selector="onRedeemLaterPressed:" destination="xDr-1S-vrP" eventType="touchUpInside" id="blY-Y9-7ic"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="JqG-eK-xVL"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="M5d-ew-uyf" firstAttribute="top" secondItem="Wak-Lc-2Tf" secondAttribute="bottom" constant="8" id="4m2-t5-ljZ"/>
+                <constraint firstAttribute="bottom" secondItem="QOa-Br-GKN" secondAttribute="bottom" constant="15" id="9XV-cs-UFg"/>
                 <constraint firstAttribute="trailing" secondItem="M5d-ew-uyf" secondAttribute="trailing" constant="8" id="N9S-f5-1Av"/>
+                <constraint firstItem="QOa-Br-GKN" firstAttribute="centerX" secondItem="xDr-1S-vrP" secondAttribute="centerX" id="QLn-6D-dsG"/>
+                <constraint firstItem="QOa-Br-GKN" firstAttribute="top" secondItem="M5d-ew-uyf" secondAttribute="bottom" constant="12" id="bfb-zM-awc"/>
                 <constraint firstAttribute="bottom" secondItem="M5d-ew-uyf" secondAttribute="bottom" constant="34" id="f9r-ac-vCE"/>
                 <constraint firstItem="Wak-Lc-2Tf" firstAttribute="centerX" secondItem="xDr-1S-vrP" secondAttribute="centerX" id="kKd-48-S5j"/>
                 <constraint firstItem="M5d-ew-uyf" firstAttribute="leading" secondItem="xDr-1S-vrP" secondAttribute="leading" constant="8" id="l6f-Z9-Kva"/>
-                <constraint firstItem="8WO-on-543" firstAttribute="top" secondItem="xDr-1S-vrP" secondAttribute="top" constant="30" id="mwb-et-MUG"/>
+                <constraint firstItem="8WO-on-543" firstAttribute="top" secondItem="xDr-1S-vrP" secondAttribute="top" constant="15" id="mwb-et-MUG"/>
+                <constraint firstItem="Wak-Lc-2Tf" firstAttribute="top" secondItem="8WO-on-543" secondAttribute="bottom" constant="8" id="nYs-OH-3Lv"/>
                 <constraint firstAttribute="trailing" secondItem="8WO-on-543" secondAttribute="trailing" constant="8" id="u6K-Nv-9pH"/>
                 <constraint firstItem="Wak-Lc-2Tf" firstAttribute="top" secondItem="8WO-on-543" secondAttribute="bottom" constant="8" id="uPg-2R-5sf"/>
                 <constraint firstItem="8WO-on-543" firstAttribute="leading" secondItem="xDr-1S-vrP" secondAttribute="leading" constant="8" id="x37-bO-3mH"/>
                 <constraint firstItem="M5d-ew-uyf" firstAttribute="top" secondItem="Wak-Lc-2Tf" secondAttribute="bottom" constant="15" id="yBy-bk-1hg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="uPg-2R-5sf"/>
+                    <exclude reference="f9r-ac-vCE"/>
+                    <exclude reference="yBy-bk-1hg"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="itemImage" destination="Wak-Lc-2Tf" id="xol-Hh-5jd"/>
                 <outlet property="itemName" destination="M5d-ew-uyf" id="dQZ-SN-OzU"/>
+                <outlet property="mapsButton" destination="6la-sB-6GM" id="eOa-3B-Ujb"/>
+                <outlet property="redeemLaterButton" destination="Zy5-gZ-h11" id="QDP-Ao-qu6"/>
                 <outlet property="resultsLabel" destination="8WO-on-543" id="Pds-iu-VU0"/>
             </connections>
             <point key="canvasLocation" x="249" y="158"/>
         </view>
     </objects>
-    <resources>
-        <image name="milkshake" width="300" height="280"/>
-    </resources>
 </document>
