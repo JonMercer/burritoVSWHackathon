@@ -13,15 +13,27 @@ class ViewController: UIViewController {
     
     var cardView: CardView!
     
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
+    
+    var timer = NSTimer()
+    var secondsLeft = 60*40 // 40min
+    
     let CHANGE_MODE_DELAY = 2.0
     let LOADING_DELAY = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        self.tabBarController?.tabBar.tintColor = BLUE_COLOR
+        self.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
+        self.tabBarController?.tabBar.backgroundImage = UIImage.fromColor(DARK_BLUR_COLOR)
         //self.tabBarController?.tabBar.backgroundColor = UIColor.redColor()
         //self.tabBarController?.tabBar.translucent = false
+        
+        updateTimerLabel()
+        let one:NSTimeInterval = 1.0
+        timer = NSTimer.scheduledTimerWithTimeInterval(one, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        
     }
 
     @IBAction func onTestButtonTapped(sender: AnyObject) {
@@ -30,6 +42,23 @@ class ViewController: UIViewController {
     
     @IBAction func onNotificationButtonTapped(sender: AnyObject) {
         sendLocalNotification()
+    }
+    
+    func timerAction() {
+        
+        if(secondsLeft > 0) {
+            secondsLeft -= 1
+        } else {
+            timer.invalidate()
+        }
+        
+        updateTimerLabel()
+        
+    }
+    
+    func updateTimerLabel() {
+        minutesLabel.text = String(format: "%02d",(secondsLeft / 60) % 60)
+        secondsLabel.text = String(format: "%02d", secondsLeft % 60)
     }
     
     func showItem(){
@@ -74,5 +103,18 @@ extension UIViewController {
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension UIImage {
+    static func fromColor(color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, rect)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img
     }
 }

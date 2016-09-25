@@ -21,6 +21,8 @@
             <string>MoskSemi-Bold600</string>
             <string>MoskSemi-Bold600</string>
             <string>MoskSemi-Bold600</string>
+            <string>MoskSemi-Bold600</string>
+            <string>MoskSemi-Bold600</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -47,8 +49,41 @@
                                     <action selector="onTestButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rv-Rs-hAi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWY-Qb-veX">
+                                <rect key="frame" x="475" y="369" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onNotificationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyc-2u-cop"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-lP-sAz">
+                                <rect key="frame" x="152" y="222" width="100" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Ljn-3S-roH"/>
+                                    <constraint firstAttribute="width" constant="100" id="qIz-iS-p93"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDR-Ad-joY">
+                                <rect key="frame" x="337" y="222" width="118" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="HLs-lE-4hF"/>
+                                    <constraint firstAttribute="width" constant="118" id="cnm-gL-cPv"/>
+                                    <constraint firstAttribute="height" constant="85" id="m0Z-JD-mTS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HLs-lE-4hF"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="streak" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-l2-Rge">
-                                <rect key="frame" x="154" y="28" width="203" height="86"/>
+                                <rect key="frame" x="207" y="50" width="203" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="Gdd-mN-9cw"/>
                                     <constraint firstAttribute="height" constant="100" id="LG3-vr-qnX"/>
@@ -62,33 +97,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="swb-Ce-Uyh">
-                                <rect key="frame" x="154" y="186" width="196" height="85"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-lP-sAz">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="85"/>
-                                        <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="70"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDR-Ad-joY">
-                                        <rect key="frame" x="126" y="0.0" width="70" height="85"/>
-                                        <fontDescription key="fontDescription" name="MoskExtra-Bold800" family="Mosk" pointSize="70"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="gBB-8d-YeR"/>
-                                    <constraint firstAttribute="height" constant="73" id="ri0-uC-WY7"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="gBB-8d-YeR"/>
-                                        <exclude reference="ri0-uC-WY7"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VF-oQ-8St">
                                 <rect key="frame" x="138" y="315" width="146" height="57"/>
                                 <fontDescription key="fontDescription" name="MoskSemi-Bold600" family="Mosk" pointSize="25"/>
@@ -143,15 +151,45 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWY-Qb-veX">
-                                <rect key="frame" x="475" y="369" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onNotificationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyc-2u-cop"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NEXT GIVEAWAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US3-Fa-6mT">
+                                <rect key="frame" x="228" y="185" width="138" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="GTB-ih-EzZ"/>
+                                    <constraint firstAttribute="height" constant="18" id="gaW-ls-v3F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MoskSemi-Bold600" family="Mosk" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-RK-1yG">
+                                <rect key="frame" x="243" y="380" width="115" height="20"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-pin" translatesAutoresizingMaskIntoConstraints="NO" id="ozP-l1-bxE">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="GUN-I0-A4l"/>
+                                            <constraint firstAttribute="width" constant="31" id="hoz-fd-J5e"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vancouver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7m-PB-eFF">
+                                        <rect key="frame" x="36" y="0.0" width="79" height="20"/>
+                                        <fontDescription key="fontDescription" name="MoskSemi-Bold600" family="Mosk" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="RTv-3s-oda"/>
+                                    <constraint firstAttribute="height" constant="20" id="VSP-mh-elR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RTv-3s-oda"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.2627450980392157" green="0.49019607843137253" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.49019607840000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="jV3-9d-AbY" secondAttribute="trailing" constant="257" id="0OP-23-cwX"/>
                             <constraint firstItem="PiP-l2-Rge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="0Yj-02-3K9"/>
@@ -163,19 +201,28 @@
                             <constraint firstItem="PiP-l2-Rge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DwJ-58-41K"/>
                             <constraint firstItem="ynG-f1-ELn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="EGi-LF-5gk"/>
                             <constraint firstAttribute="trailing" secondItem="ynG-f1-ELn" secondAttribute="trailing" constant="12" id="HMi-dJ-7Bm"/>
-                            <constraint firstItem="9VF-oQ-8St" firstAttribute="centerX" secondItem="ktR-lP-sAz" secondAttribute="centerX" id="RVo-Lt-gia"/>
+                            <constraint firstItem="Asa-RK-1yG" firstAttribute="top" secondItem="E1W-XA-Eyz" secondAttribute="bottom" constant="8" id="SDI-mz-Bzo"/>
+                            <constraint firstItem="BDR-Ad-joY" firstAttribute="top" secondItem="US3-Fa-6mT" secondAttribute="bottom" constant="-10" id="T2U-R8-7kY"/>
+                            <constraint firstItem="BDR-Ad-joY" firstAttribute="centerY" secondItem="ktR-lP-sAz" secondAttribute="centerY" id="TZ5-tw-8oI"/>
                             <constraint firstItem="PiP-l2-Rge" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="TkQ-go-HhQ"/>
                             <constraint firstItem="jV3-9d-AbY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="257" id="Tm1-fM-uWJ"/>
+                            <constraint firstItem="E1W-XA-Eyz" firstAttribute="centerX" secondItem="BDR-Ad-joY" secondAttribute="centerX" id="UNZ-hi-Rre"/>
                             <constraint firstItem="E1W-XA-Eyz" firstAttribute="centerY" secondItem="9VF-oQ-8St" secondAttribute="centerY" id="Va0-rG-qD2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jV3-9d-AbY" secondAttribute="bottom" constant="221" id="WwK-6v-zro"/>
-                            <constraint firstItem="9VF-oQ-8St" firstAttribute="top" secondItem="swb-Ce-Uyh" secondAttribute="bottom" constant="8" id="cpd-T8-GVD"/>
-                            <constraint firstItem="E1W-XA-Eyz" firstAttribute="centerX" secondItem="BDR-Ad-joY" secondAttribute="centerX" id="gp7-54-QN9"/>
+                            <constraint firstItem="Asa-RK-1yG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XiC-3d-fc2"/>
+                            <constraint firstItem="ktR-lP-sAz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="bdk-RE-3qb"/>
+                            <constraint firstItem="Asa-RK-1yG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="dpM-ab-Qad"/>
+                            <constraint firstItem="ktR-lP-sAz" firstAttribute="top" secondItem="PiP-l2-Rge" secondAttribute="bottom" constant="40" id="fvB-6g-Xxj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="68C-Sy-fC7" secondAttribute="bottom" constant="35" id="hJm-L9-8QC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="68C-Sy-fC7" secondAttribute="trailing" constant="74" id="iFh-GI-a7C"/>
                             <constraint firstItem="68C-Sy-fC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="oZ5-ft-PxY"/>
-                            <constraint firstItem="swb-Ce-Uyh" firstAttribute="top" secondItem="PiP-l2-Rge" secondAttribute="bottom" constant="30" id="qYc-Ob-4k2"/>
-                            <constraint firstItem="swb-Ce-Uyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uNz-Ao-yc9"/>
+                            <constraint firstItem="9VF-oQ-8St" firstAttribute="top" secondItem="ktR-lP-sAz" secondAttribute="bottom" constant="8" id="s3s-wE-MJU"/>
+                            <constraint firstItem="Asa-RK-1yG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s5j-Se-8wQ"/>
+                            <constraint firstItem="US3-Fa-6mT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tzw-f1-Akg"/>
+                            <constraint firstItem="ktR-lP-sAz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uGP-rY-sz3"/>
+                            <constraint firstItem="BDR-Ad-joY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="vPK-UQ-2xX"/>
                             <constraint firstItem="PiP-l2-Rge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="vYu-Zk-tWU"/>
+                            <constraint firstItem="9VF-oQ-8St" firstAttribute="centerX" secondItem="ktR-lP-sAz" secondAttribute="centerX" id="x2N-jm-vqr"/>
                             <constraint firstItem="68C-Sy-fC7" firstAttribute="top" secondItem="E1W-XA-Eyz" secondAttribute="bottom" constant="100" id="xdC-PR-lWR"/>
                         </constraints>
                         <variation key="default">
@@ -183,6 +230,8 @@
                                 <exclude reference="0Yj-02-3K9"/>
                                 <exclude reference="30s-Zl-Kp0"/>
                                 <exclude reference="vYu-Zk-tWU"/>
+                                <exclude reference="uGP-rY-sz3"/>
+                                <exclude reference="dpM-ab-Qad"/>
                                 <exclude reference="iFh-GI-a7C"/>
                                 <exclude reference="oZ5-ft-PxY"/>
                                 <exclude reference="xdC-PR-lWR"/>
@@ -194,6 +243,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="dice-3" id="zgD-Vg-QAY"/>
                     <connections>
+                        <outlet property="minutesLabel" destination="ktR-lP-sAz" id="fEM-dg-OAn"/>
+                        <outlet property="secondsLabel" destination="BDR-Ad-joY" id="yjI-t6-2x4"/>
                         <segue destination="1NB-pu-fzG" kind="show" identifier="vcToLoginVC" id="OJN-Ne-J0Q"/>
                     </connections>
                 </viewController>
@@ -451,6 +502,7 @@
     <resources>
         <image name="backbuttonwhite" width="128" height="128"/>
         <image name="dice-3" width="20" height="20"/>
+        <image name="location-pin" width="85" height="85"/>
         <image name="pinata" width="20" height="26"/>
         <image name="refer" width="2528" height="1040"/>
         <image name="store" width="170" height="170"/>

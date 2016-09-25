@@ -24,6 +24,7 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var scannedBarcodes: [AVMetadataMachineReadableCodeObject] = []
     
     var flag: Bool = true
+    var hasScanned: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,29 +97,31 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.center.y += 40
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
-                if flag {
+                //messageLabel.text = metadataObj.stringValue
+                messageLabel.text = ""
+                
+                let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+                let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
+                cardView.item = item
                     
-                    delay(0.1){
-                        self.flag = false
-                        let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
-                        let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
-                        cardView.item = item
-                        
-                        let popupConfig = STZPopupViewConfig()
-                        popupConfig.dismissTouchBackground = true
-                        popupConfig.cornerRadius = 5.0
-                        
-                        self.presentPopupView(cardView, config:  popupConfig)
-                    }
+                if hasScanned {
+                    cardView.resultsLabel.text = "This code has already been scanned"
+                } else {
+                    hasScanned = true
+                    cardView.resultsLabel.text = "Triple O's Milkshake"
+                }
+                    
+                let popupConfig = STZPopupViewConfig()
+                popupConfig.dismissTouchBackground = true
+                popupConfig.cornerRadius = 5.0
+                
+                self.presentPopupView(cardView, config:  popupConfig)
+                
+                delay(2){
+                    cardView.removeFromSuperview()
                 }
             }
         }
-    }
-    
-    func updateScannedLabel(){
-        scannedLabel.text = "\(numberScanned) redeemed!"
-        bounceView(scannedLabel, amount: 1.5)
     }
     
     @IBAction func onBackButtonPressed(sender: AnyObject) {

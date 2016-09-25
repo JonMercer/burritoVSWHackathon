@@ -8,6 +8,7 @@
 
 import UIKit
 import ButtonAndLabelActivitySpinner
+import FirebaseAuth
 
 class LoginVC: UIViewController, UITextFieldDelegate {
 
@@ -49,10 +50,25 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         spinLabel.activityIndicator.color = UIColor(red: 255.0/255.0, green: 64.0/255.0, blue: 64.0/255.0, alpha: 1.0)
         spinLabel.startAnimating()
 
+        loginUser(){}
+        
         delay(LOGIN_DELAY){
             self.performSegueWithIdentifier("qrScanVCFromLoginVC", sender: nil)
             self.spinLabel.stopAnimating()
             self.loginButton.hidden = false
+        }
+    }
+    
+    func loginUser(completion:()->()){
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        FIRAuth.auth()?.signInWithEmail(email, password: password){ (user, error) in
+            if error != nil {
+                FIRAuth.auth()?.createUserWithEmail(email, password: password){(user, error) in
+                    completion()
+                }
+            }
         }
     }
 }
