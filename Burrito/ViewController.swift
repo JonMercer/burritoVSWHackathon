@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     var minutesLabel = ""
     var secondsLabel = ""
-    var secondsLeft = 6 // 40min
+    var secondsLeft = 60*40 // 40min
 
     override func viewDidLoad() {
         super.viewDidLoad()
