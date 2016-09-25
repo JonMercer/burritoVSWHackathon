@@ -10,4 +10,7 @@ target 'Burrito' do
   pod 'IQKeyboardManagerSwift'
   pod 'expanding-collection'
   pod 'ButtonAndLabelActivitySpinner'
+  pod 'Gifu'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
 end

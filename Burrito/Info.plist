@@ -38,5 +38,17 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Mosk Bold 700.ttf</string>
+		<string>Mosk Extra-Bold 800.ttf</string>
+		<string>Mosk Extra-Light 200.ttf</string>
+		<string>Mosk Light 300.ttf</string>
+		<string>Mosk Medium 500.ttf</string>
+		<string>Mosk Normal 400.ttf</string>
+		<string>Mosk Semi-Bold 600.ttf</string>
+		<string>Mosk Thin 100.ttf</string>
+		<string>Mosk Ultra-Bold 900.ttf</string>
+	</array>
 </dict>
 </plist>
