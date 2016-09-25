@@ -27,7 +27,9 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ7-Bq-oYo">
                     <rect key="frame" x="13" y="241" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="notificationButton:" destination="xDr-1S-vrP" eventType="touchUpInside" id="RAj-67-7Ci"/>
                     </connections>

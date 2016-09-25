@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import STZPopupView
 
 class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -21,6 +22,8 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var numberScanned: Int = 0
     var scannedBarcodes: [AVMetadataMachineReadableCodeObject] = []
+    
+    var flag: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,10 +97,17 @@ class QRScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
-                if !scannedBarcodes.contains(barCodeObject){
-                    self.scannedBarcodes.append(barCodeObject)
-                    numberScanned++
-                    updateScannedLabel()
+                if flag {
+                    flag = false
+                    let item = Item(name: "Triple O's Milkshake", restaurant: "Triple O's")
+                    let cardView = CardView.instanceFromNib(CGRectMake(0, 0, 300, 300))
+                    cardView.item = item
+                    
+                    let popupConfig = STZPopupViewConfig()
+                    popupConfig.dismissTouchBackground = true
+                    popupConfig.cornerRadius = 5.0
+                    
+                    presentPopupView(cardView, config:  popupConfig)
                 }
             }
         }
