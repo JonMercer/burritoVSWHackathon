@@ -10,4 +10,5 @@ target 'Burrito' do
   pod 'IQKeyboardManagerSwift'
   pod 'expanding-collection'
   pod 'ButtonAndLabelActivitySpinner'
+  pod 'Gifu'
 end

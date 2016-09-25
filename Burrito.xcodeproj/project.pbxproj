@@ -19,6 +19,17 @@
 		8ED66FBE1D9731700014902D /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED66FBC1D9731700014902D /* ItemCell.swift */; };
 		8ED66FBF1D9731700014902D /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FBD1D9731700014902D /* ItemCell.xib */; };
 		8ED66FC11D9766C30014902D /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED66FC01D9766C30014902D /* NotificationsManager.swift */; };
+		8ED66FD01D9780F40014902D /* Mosk Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FC61D9780F40014902D /* Mosk Bold 700.ttf */; };
+		8ED66FD11D9780F40014902D /* Mosk Extra-Bold 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FC71D9780F40014902D /* Mosk Extra-Bold 800.ttf */; };
+		8ED66FD21D9780F40014902D /* Mosk Extra-Light 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FC81D9780F40014902D /* Mosk Extra-Light 200.ttf */; };
+		8ED66FD31D9780F40014902D /* Mosk Light 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FC91D9780F40014902D /* Mosk Light 300.ttf */; };
+		8ED66FD41D9780F40014902D /* Mosk Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCA1D9780F40014902D /* Mosk Medium 500.ttf */; };
+		8ED66FD51D9780F40014902D /* Mosk Normal 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCB1D9780F40014902D /* Mosk Normal 400.ttf */; };
+		8ED66FD61D9780F40014902D /* Mosk Semi-Bold 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCC1D9780F40014902D /* Mosk Semi-Bold 600.ttf */; };
+		8ED66FD71D9780F40014902D /* Mosk Thin 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCD1D9780F40014902D /* Mosk Thin 100.ttf */; };
+		8ED66FD81D9780F40014902D /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCE1D9780F40014902D /* Mosk Ultra-Bold 900.ttf */; };
+		8ED66FD91D9780F40014902D /* Mosk_Info.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FCF1D9780F40014902D /* Mosk_Info.pdf */; };
+		8ED66FDB1D9790530014902D /* dancingtaco.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8ED66FDA1D9790530014902D /* dancingtaco.gif */; };
 		C863C6A01D972B92008D5C93 /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C863C69F1D972B92008D5C93 /* ShareView.xib */; };
 		C863C6A21D972BA1008D5C93 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C863C6A11D972BA1008D5C93 /* ShareView.swift */; };
 		C8C609591D9648D100BC9597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C609581D9648D100BC9597 /* AppDelegate.swift */; };
@@ -42,6 +53,17 @@
 		8ED66FBC1D9731700014902D /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		8ED66FBD1D9731700014902D /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		8ED66FC01D9766C30014902D /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		8ED66FC61D9780F40014902D /* Mosk Bold 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Bold 700.ttf"; sourceTree = "<group>"; };
+		8ED66FC71D9780F40014902D /* Mosk Extra-Bold 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Bold 800.ttf"; sourceTree = "<group>"; };
+		8ED66FC81D9780F40014902D /* Mosk Extra-Light 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Light 200.ttf"; sourceTree = "<group>"; };
+		8ED66FC91D9780F40014902D /* Mosk Light 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Light 300.ttf"; sourceTree = "<group>"; };
+		8ED66FCA1D9780F40014902D /* Mosk Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Medium 500.ttf"; sourceTree = "<group>"; };
+		8ED66FCB1D9780F40014902D /* Mosk Normal 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Normal 400.ttf"; sourceTree = "<group>"; };
+		8ED66FCC1D9780F40014902D /* Mosk Semi-Bold 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Semi-Bold 600.ttf"; sourceTree = "<group>"; };
+		8ED66FCD1D9780F40014902D /* Mosk Thin 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Thin 100.ttf"; sourceTree = "<group>"; };
+		8ED66FCE1D9780F40014902D /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
+		8ED66FCF1D9780F40014902D /* Mosk_Info.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Mosk_Info.pdf; sourceTree = "<group>"; };
+		8ED66FDA1D9790530014902D /* dancingtaco.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dancingtaco.gif; sourceTree = "<group>"; };
 		B1933F538CA3433447E9A82E /* Pods-Burrito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.debug.xcconfig"; sourceTree = "<group>"; };
 		C6ED2AC6315E617BC85A95E7 /* Pods-Burrito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Burrito.release.xcconfig"; path = "Pods/Target Support Files/Pods-Burrito/Pods-Burrito.release.xcconfig"; sourceTree = "<group>"; };
 		C863C69F1D972B92008D5C93 /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
@@ -127,6 +149,32 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8ED66FC41D9780DF0014902D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8ED66FDA1D9790530014902D /* dancingtaco.gif */,
+				8ED66FC51D9780F40014902D /* Mosk Typeface */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8ED66FC51D9780F40014902D /* Mosk Typeface */ = {
+			isa = PBXGroup;
+			children = (
+				8ED66FC61D9780F40014902D /* Mosk Bold 700.ttf */,
+				8ED66FC71D9780F40014902D /* Mosk Extra-Bold 800.ttf */,
+				8ED66FC81D9780F40014902D /* Mosk Extra-Light 200.ttf */,
+				8ED66FC91D9780F40014902D /* Mosk Light 300.ttf */,
+				8ED66FCA1D9780F40014902D /* Mosk Medium 500.ttf */,
+				8ED66FCB1D9780F40014902D /* Mosk Normal 400.ttf */,
+				8ED66FCC1D9780F40014902D /* Mosk Semi-Bold 600.ttf */,
+				8ED66FCD1D9780F40014902D /* Mosk Thin 100.ttf */,
+				8ED66FCE1D9780F40014902D /* Mosk Ultra-Bold 900.ttf */,
+				8ED66FCF1D9780F40014902D /* Mosk_Info.pdf */,
+			);
+			path = "Mosk Typeface";
+			sourceTree = "<group>";
+		};
 		C8C6094C1D9648D000BC9597 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +201,7 @@
 				8EC84C601D96E3A10044E0E7 /* View */,
 				8EC84C5F1D96E39C0044E0E7 /* Controller */,
 				C8C609581D9648D100BC9597 /* AppDelegate.swift */,
+				8ED66FC41D9780DF0014902D /* Resources */,
 				C8C6095C1D9648D100BC9597 /* Main.storyboard */,
 				C8C609621D9648D100BC9597 /* Assets.xcassets */,
 				C8C609641D9648D100BC9597 /* LaunchScreen.storyboard */,
@@ -224,11 +273,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C609661D9648D100BC9597 /* LaunchScreen.storyboard in Resources */,
+				8ED66FD21D9780F40014902D /* Mosk Extra-Light 200.ttf in Resources */,
+				8ED66FD61D9780F40014902D /* Mosk Semi-Bold 600.ttf in Resources */,
+				8ED66FD11D9780F40014902D /* Mosk Extra-Bold 800.ttf in Resources */,
+				8ED66FDB1D9790530014902D /* dancingtaco.gif in Resources */,
+				8ED66FD51D9780F40014902D /* Mosk Normal 400.ttf in Resources */,
+				8ED66FD91D9780F40014902D /* Mosk_Info.pdf in Resources */,
 				C8C609631D9648D100BC9597 /* Assets.xcassets in Resources */,
 				8ED66FBF1D9731700014902D /* ItemCell.xib in Resources */,
 				8EC84C631D96E3CC0044E0E7 /* CardView.xib in Resources */,
 				C863C6A01D972B92008D5C93 /* ShareView.xib in Resources */,
+				8ED66FD71D9780F40014902D /* Mosk Thin 100.ttf in Resources */,
 				C8C6095E1D9648D100BC9597 /* Main.storyboard in Resources */,
+				8ED66FD81D9780F40014902D /* Mosk Ultra-Bold 900.ttf in Resources */,
+				8ED66FD31D9780F40014902D /* Mosk Light 300.ttf in Resources */,
+				8ED66FD01D9780F40014902D /* Mosk Bold 700.ttf in Resources */,
+				8ED66FD41D9780F40014902D /* Mosk Medium 500.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Gifu
 
 class CardView: UIView {
 
@@ -14,17 +15,7 @@ class CardView: UIView {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     
-    @IBAction func notificationButton(sender: AnyObject) {
-        //temporary button
-        var localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5)
-        localNotification.alertBody = "Giveaway: Triple O's Milkshake."
-        localNotification.timeZone = NSTimeZone.defaultTimeZone()
-        localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-
-    }
+    var gifView: AnimatableImageView!
     
     var item: Item!
     
@@ -40,7 +31,17 @@ class CardView: UIView {
         return view
     }
     
-    // When card is tapped, changeModes is called. If it is showingQRCode it will change to show item and vice versa
+    func showLoading(){
+        gifView = AnimatableImageView(frame: itemImage.frame)
+        gifView.bounds = itemImage.bounds
+        gifView.animateWithImage(named: "dancingtaco.gif")
+        self.addSubview(gifView)
+    }
+    
+    func stopLoading(){
+        gifView.removeFromSuperview()
+    }
+    
     func changeModes(){
         guard let item = item else { return }
         

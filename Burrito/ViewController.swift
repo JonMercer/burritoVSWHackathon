@@ -13,15 +13,23 @@ class ViewController: UIViewController {
     
     var cardView: CardView!
     
-    let CHANGE_MODE_DELAY: Int64 = 2
+    let CHANGE_MODE_DELAY = 2.0
+    let LOADING_DELAY = 2.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
+        self.tabBarController?.tabBar.tintColor = BLUE_COLOR
+        //self.tabBarController?.tabBar.backgroundColor = UIColor.redColor()
+        //self.tabBarController?.tabBar.translucent = false
     }
 
     @IBAction func onTestButtonTapped(sender: AnyObject) {
         showItem()
+    }
+    
+    @IBAction func onNotificationButtonTapped(sender: AnyObject) {
+        sendLocalNotification()
     }
     
     func showItem(){
@@ -36,10 +44,14 @@ class ViewController: UIViewController {
         cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.onCardTapped(_:))))
         presentPopupView(cardView, config:  popupConfig)
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), CHANGE_MODE_DELAY * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            if !self.cardView.showingQRCode {
-                self.cardView.changeModes()
+        cardView.showLoading()
+        
+        delay(LOADING_DELAY){
+            self.cardView.stopLoading()
+            delay(self.CHANGE_MODE_DELAY){
+                if !self.cardView.showingQRCode {
+                    self.cardView.changeModes()
+                }
             }
         }
     }
