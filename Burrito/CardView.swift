@@ -17,7 +17,7 @@ class CardView: UIView {
     @IBAction func notificationButton(sender: AnyObject) {
         //temporary button
         var localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 20)
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 10)
         localNotification.alertBody = "Raffle: Tripple O's Milkshake."
         localNotification.timeZone = NSTimeZone.defaultTimeZone()
         localNotification.applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
